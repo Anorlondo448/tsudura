@@ -6,7 +6,7 @@ module Tsudura
     end
 
     def attributes
-      @config.symbolize_keys
+      @config.deep_symbolize_keys
     end
   end
 end

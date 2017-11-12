@@ -6,6 +6,12 @@ subnet_id: subnet-cd985794
 image_id: ami-56d4ad31
 key_name: tsudura_sample
 iam_instance_profile: tsudura_role
+block_device_mappings:
+  virtual_name: "virtual_name"
+  device_name: "device_name"
+  ebs:
+    snapshot_id: "snapshot_id"
+ebs_optimized: false
 playbook_path: "spec/samples/ansible_playbook/staging.yml"
 inventory_file: "~/.ansible/ec2.py"
 vault_password: <%= ENV["VAULT_PASSWORD"] || 'tsudura' %>

@@ -27,6 +27,14 @@ describe Tsudura::ConfigParser do
           auto_scaling_group_name: "tsudura-stg-blue",
           owner: 99999999,
           iam_instance_profile: "tsudura_role",
+          block_device_mappings: {
+            virtual_name: "virtual_name",
+            device_name: "device_name",
+            ebs: {
+              snapshot_id: "snapshot_id"
+            }
+          },
+          ebs_optimized: "ebs_optimized"
         )
       end
     end
